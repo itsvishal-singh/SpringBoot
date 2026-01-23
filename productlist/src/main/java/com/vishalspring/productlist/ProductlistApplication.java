@@ -9,10 +9,11 @@ public class ProductlistApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(ProductlistApplication.class, args);
-		MyComponent myComponent = context.getBean(MyComponent.class);
-		myComponent.getMessage();
-		System.out.println("Hello");
+		MyApp myComponent = context.getBean(MyApp.class);
+		myComponent.run();
 
+
+		System.out.println("Hello");
 	}
 
 }
