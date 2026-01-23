@@ -1,5 +1,6 @@
 package com.vishalspring.productlist;
 
+import org.springframework.context.ApplicationContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,8 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProductlistApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductlistApplication.class, args);
+		ApplicationContext context = SpringApplication.run(ProductlistApplication.class, args);
+		MyComponent myComponent = context.getBean(MyComponent.class);
+		myComponent.getMessage();
 		System.out.println("Hello");
+
 	}
 
 }
