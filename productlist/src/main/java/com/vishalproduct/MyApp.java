@@ -1,4 +1,4 @@
-package com.vishalspring.productlist;
+package com.vishalproduct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
