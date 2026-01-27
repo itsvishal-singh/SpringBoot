@@ -1,4 +1,4 @@
-package com.vishalproduct.service;
+package com.vishalspring.product.service;
 
 import org.springframework.stereotype.Service;
 
