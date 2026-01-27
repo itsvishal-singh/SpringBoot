@@ -1,4 +1,4 @@
-package com.vishalproduct.controller;
+package com.vishalspring.product.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
