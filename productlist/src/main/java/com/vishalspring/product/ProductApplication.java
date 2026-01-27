@@ -1,4 +1,4 @@
-package com.vishalproduct;
+package com.vishalspring.product;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.boot.SpringApplication;

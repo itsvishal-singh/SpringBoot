@@ -1,4 +1,4 @@
-package com.vishalproduct.entity;
+package com.vishalspring.product.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
