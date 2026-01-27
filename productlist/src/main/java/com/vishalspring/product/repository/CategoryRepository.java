@@ -1,6 +1,6 @@
-package com.vishalproduct.repository;
+package com.vishalspring.product.repository;
 
-import com.vishalproduct.entity.Category;
+import com.vishalspring.product.entity.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
