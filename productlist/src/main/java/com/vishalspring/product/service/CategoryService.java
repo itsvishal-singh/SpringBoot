@@ -4,10 +4,14 @@ import com.vishalspring.product.dto.CategoryDTO;
 import com.vishalspring.product.entity.Category;
 import com.vishalspring.product.mapper.CategoryMapper;
 import com.vishalspring.product.repository.CategoryRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class CategoryService {
+
+
     private CategoryRepository categoryRepository;
     // create Category
     public CategoryDTO createCategory(CategoryDTO categoryDTO){
