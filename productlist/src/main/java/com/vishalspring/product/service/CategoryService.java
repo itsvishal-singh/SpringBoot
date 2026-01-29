@@ -7,6 +7,8 @@ import com.vishalspring.product.repository.CategoryRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class CategoryService {
@@ -20,6 +22,9 @@ public class CategoryService {
         return CategoryMapper.toCategoryDTO(category);
     }
     // get all categories
+    public List<CategoryDTO> getAllCategories(){
+        return categoryRepository.findAll().stream().map(CategoryMapper::toCategoryDTO).toList();
+    }
     // get category bt id
     // delete category
 
