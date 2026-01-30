@@ -6,10 +6,7 @@ import lombok.AllArgsConstructor;
 import org.apache.catalina.loader.ResourceEntry;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,8 +17,9 @@ public class CategoryController {
 
     private CategoryService categoryService;
     // get all categories
+    @GetMapping
     public List<CategoryDTO> getAllcategories(){
-
+      return categoryService.getAllCategories();
     }
     // create Categories
     @PostMapping
@@ -29,5 +27,13 @@ public class CategoryController {
         return new ResponseEntity<>(categoryService.createCategory(categoryDTO), HttpStatus.CREATED);
     }
     // get category by id
+    @GetMapping("/{id}")
+    public CategoryDTO getCategoryById(@PathVariable Long id){
+return categoryService.getCategoryById(id);
+    }
     // delete category
+    @DeleteMapping("/{id}")
+    public String deleteCategory(@PathVariable Long id){
+        return categoryService.deleteCategory(id);
+    }
 }

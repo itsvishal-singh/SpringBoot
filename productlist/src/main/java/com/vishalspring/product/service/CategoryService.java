@@ -26,6 +26,14 @@ public class CategoryService {
         return categoryRepository.findAll().stream().map(CategoryMapper::toCategoryDTO).toList();
     }
     // get category bt id
+    public  CategoryDTO getCategoryById(Long id){
+        Category category = categoryRepository.findById(id).orElseThrow(()-> new RuntimeException("Category not found"));
+        return CategoryMapper.toCategoryDTO(category);
+    }
     // delete category
+    public String  deleteCategory(Long id){
+        categoryRepository.deleteById(id);
+        return "Category " + id + " has been Deleted";
+    }
 
 }
