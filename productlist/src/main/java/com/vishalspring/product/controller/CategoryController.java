@@ -3,7 +3,6 @@ package com.vishalspring.product.controller;
 import com.vishalspring.product.dto.CategoryDTO;
 import com.vishalspring.product.service.CategoryService;
 import lombok.AllArgsConstructor;
-import org.apache.catalina.loader.ResourceEntry;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
